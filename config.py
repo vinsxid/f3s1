@@ -46,7 +46,7 @@ pic_girl = os.environ.get("PIC_GIRL", "")
 # =========================================================== #
 
 pesan_join = os.environ.get("PESAN_JOIN", "Tidak dapat diakses harap join terlebih dahulu")
-start_msg = os.environ.get("START_MSG", "Hai {fullname} 🌱 \nIni adalah bot menfess, semua pesan yang kamu kirim akan masuk ke channel secara anonymous. Silakan tuliskan pesanmu dengan mencantumkan salah satu hastag:\n\nButuh bantuan? Hubungi @Vinsxid")
+start_msg = os.environ.get("START_MSG", "Hai {fullname} 🌱 \n\nIni adalah bot menfess, semua pesan yang kamu kirim akan masuk ke channel secara anonymous. Silakan tuliskan pesanmu dengan mencantumkan salah satu hastag:\n\n#Thriller pengakuan dosa/hal2 yang berbau kejahatan baik lu jdi korban atau pun pelaku\n#Romance asmara tentang cinta2an\n#Horor ceritakan kisah horor\n#Comedy ceritakan kisah lucu\n#Random buat nanya atau apalah\n\nButuh bantuan? Hubungi @Vinsxid")
 menu_msg = os.environ.get("MENU_MSG","""
 #Thriller pengakuan dosa/hal2 yang berbau kejahatan baik lu jdi korban atau pun pelaku
 #Romance asmara tentang cinta2an
