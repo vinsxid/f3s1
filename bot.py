@@ -59,10 +59,10 @@ class Bot(Client):
         self.id_bot = bot_me.id
         data.append(self.id_bot)
         await self.set_bot_commands([
-            BotCommand('status', '🍃 check status'), BotCommand('talent', '👙 talent konten / vcs'),
-            BotCommand('daddysugar', '👔 daddy sugar trusted'), BotCommand('moansgirl', '🧘‍♀️ moans girl'),
-            BotCommand('moansboy', '🧘 moans boy'), BotCommand('gfrent', '🤵 girl friend rent'),
-            BotCommand('bfrent', '🤵 boy friend rent')
+            BotCommand('status', '🍃 check status'), BotCommand('Support', 'Akun Support'),
+            #BotCommand('daddysugar', '👔 daddy sugar trusted'), BotCommand('moansgirl', '🧘‍♀️ moans girl'),
+            #BotCommand('moansboy', '🧘 moans boy'), BotCommand('gfrent', '🤵 girl friend rent'),
+            #BotCommand('bfrent', '🤵 boy friend rent')
         ], BotCommandScopeAllPrivateChats())
         
         print('BOT TELAH AKTIF')
@@ -73,9 +73,9 @@ class Bot(Client):
     
     async def kirim_pesan(self, x: str):
         db = Database(config.id_admin).get_pelanggan()
-        pesan = f'<b>TOTAL USER ( {db.total_pelanggan} ) PENGGUNA 📊</b>\n'
-        pesan += f'➜ <i>Total user yang mengirim menfess hari ini adalah {x}/{db.total_pelanggan} user</i>\n'
-        pesan += f'➜ <i>Berhasil direset menjadi 0 menfess</i>'
+        pesan = f'<b>📊 #TOTALUSER ( {db.total_pelanggan} ) PENGGUNA</b>\n'
+        pesan += f'➜ <i>Total user yang mengirim menfess hari ini adalah {x}/{db.total_pelanggan} User Aktif</i>\n'
+        pesan += f'➜ <i>Berhasil DIRESET menjadi 0 Menfess</i>'
         url = f'https://api.telegram.org/bot{config.bot_token}'
         a = requests.get(f'{url}/sendMessage?chat_id={config.channel_log}&text={pesan}&parse_mode=HTML').json()
         requests.post(f'{url}/pinChatMessage?chat_id={config.channel_log}&message_id={a["result"]["message_id"]}&parse_mode=HTML')
