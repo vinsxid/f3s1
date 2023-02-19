@@ -59,7 +59,7 @@ class Bot(Client):
         self.id_bot = bot_me.id
         data.append(self.id_bot)
         await self.set_bot_commands([
-            BotCommand('status', '🍃 check status'), BotCommand('Support', 'Akun Support'),
+            BotCommand('status', '🍃 check status')#, BotCommand('Support', 'Akun Support'),
             #BotCommand('daddysugar', '👔 daddy sugar trusted'), BotCommand('moansgirl', '🧘‍♀️ moans girl'),
             #BotCommand('moansboy', '🧘 moans boy'), BotCommand('gfrent', '🤵 girl friend rent'),
             #BotCommand('bfrent', '🤵 boy friend rent')
