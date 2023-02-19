@@ -32,14 +32,14 @@ async def start_handler(client: Client, msg: types.Message):
 async def status_handler(client: Client, msg: types.Message):
     helper = Helper(client, msg)
     db = Database(msg.from_user.id).get_data_pelanggan()
-    pesan = '<b>🏷Info user</b>\n'
+    pesan = '<b>🏷 Info user</b>\n'
     pesan += f'├ID : <code>{db.id}</code>\n'
     pesan += f'├Nama : {db.mention}\n'
     pesan += f'└Status : {db.status}\n\n'
-    pesan += '<b>📝Lainnya</b>\n'
+    pesan += '<b>📝 Lainnya</b>\n'
     pesan += f'├Coin : {helper.formatrupiah(db.coin)}💰\n'
     pesan += f'├Menfess : {db.menfess}/{config.batas_kirim}\n'
-    pesan += f'├Semua Menfess : {db.all_menfess}\n'
+    pesan += f'├Total Menfess : {db.all_menfess}\n'
     pesan += f'└Bergabung : {db.sign_up}'
     await msg.reply(pesan, True, enums.ParseMode.HTML)
 
@@ -47,16 +47,16 @@ async def statistik_handler(client: Helper, id_bot: int):
     db = Database(client.user_id)
     bot = db.get_data_bot(id_bot)
     pesan = "<b>📊 STATISTIK BOT\n\n"
-    pesan += f"▪️Pelanggan: {db.get_pelanggan().total_pelanggan}\n"
-    pesan += f"▪️Admin: {len(bot.admin)}\n"
-    pesan += f"▪️Talent: {len(bot.talent)}\n"
-    pesan += f"▪️Daddy sugar: {len(bot.daddy_sugar)}\n"
-    pesan += f"▪️Moans girl: {len(bot.moansgirl)}\n"
-    pesan += f"▪️Moans boy: {len(bot.moansboy)}\n"
-    pesan += f"▪️Girlfriend rent: {len(bot.gfrent)}\n"
-    pesan += f"▪️Boyfriend rent: {len(bot.bfrent)}\n"
-    pesan += f"▪️Banned: {len(bot.ban)}\n\n"
-    pesan += f"🔰Status bot: {'AKTIF' if bot.bot_status else 'TIDAK AKTIF'}</b>"
+    pesan += f"▪️ Pelanggan: {db.get_pelanggan().total_pelanggan}\n"
+    pesan += f"▪️ Admin: {len(bot.admin)}\n"
+    pesan += f"▪️ Talent: {len(bot.talent)}\n"
+    pesan += f"▪️ Daddy sugar: {len(bot.daddy_sugar)}\n"
+    pesan += f"▪️ Moans girl: {len(bot.moansgirl)}\n"
+    pesan += f"▪️ Moans boy: {len(bot.moansboy)}\n"
+    pesan += f"▪️ Girlfriend rent: {len(bot.gfrent)}\n"
+    pesan += f"▪️ Boyfriend rent: {len(bot.bfrent)}\n"
+    pesan += f"▪️ Banned: {len(bot.ban)}\n\n"
+    pesan += f"🔰 Status Bot: {'AKTIF' if bot.bot_status else 'NON AKTIF'}</b>"
     await client.message.reply_text(pesan, True, enums.ParseMode.HTML)
 
 async def list_admin_handler(helper: Helper, id_bot: int):
