@@ -85,7 +85,7 @@ class Helper():
 
     async def send_to_channel_log(self, type: str = None, link: str = None):
         if type == 'log_daftar':
-            pesan = "<b>📊 USER BERHASIL DITAMBAHKAN DI DATABASE</b>\n"
+            pesan = "<b>📊 #ADDUSER BERHASIL DITAMBAHKAN DI DATABASE</b>\n"
             pesan += f"├ Nama -: <b>{await self.escapeHTML(self.fullname)}</b>\n"
             pesan += f"├ ID -: <code>{self.user_id}</code>\n"
             pesan += f"├ Username -: {self.username}\n"
@@ -93,7 +93,7 @@ class Helper():
             pesan += f"├ Kirim pesan -: <a href='tg://openmessage?user_id={self.user_id}'>{await self.escapeHTML(self.fullname)}</a>\n"
             pesan += f"└ Telegram Premium -: {'❌ False' if not self.premium else '✅ True'}"
         elif type == 'log_channel':
-            pesan = " 💌 INFO PESAN\n"
+            pesan = " 💌 #POST INFO PESAN USER\n"
             pesan += f"├ Nama -: <b>{await self.escapeHTML(self.fullname)}</b>\n"
             pesan += f"├ ID -: <code>{self.user_id}</code>\n"
             pesan += f"├ Username -: {self.username}\n"
