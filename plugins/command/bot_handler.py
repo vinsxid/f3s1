@@ -40,12 +40,12 @@ async def bot_handler(client: Client, msg: Message):
                     parse_mode=enums.ParseMode.HTML
                 )
     else:
-        return await msg.reply("*Cara penggunaan command*\n\nEX : `/bot <on|off>`\nContoh : `/bot on`", quote=True, parse_mode=enums.ParseMode.MARKDOWN)
+        return await msg.reply("*📋 Cara penggunaan command*\n\nEX : `/bot <on|off>`\nContoh : `/bot on`", quote=True, parse_mode=enums.ParseMode.MARKDOWN)
 
 
 async def setting_handler(client: Client, msg:types.Message):
     db = Database(msg.from_user.id).get_data_bot(client.id_bot)
-    pesan = "<b>💌 Menfess User\n\n✅ = AKTIF\n❌ = TIDAK AKTIF</b>\n"
+    pesan = "<b>⚙️ Pengaturan Menfess\n\n✅ = AKTIF\n❌ = TIDAK AKTIF</b>\n"
     pesan += "______________________________\n\n"
     photo = ["TIDAK AKTIF", "❌"] if not db.kirimchannel.photo else ["AKTIF", "✅"]
     video = ["TIDAK AKTIF", "❌"] if not db.kirimchannel.video else ["AKTIF", "✅"]
@@ -54,7 +54,7 @@ async def setting_handler(client: Client, msg:types.Message):
     pesan += f"📸 Foto = <b>{photo[0]}</b>\n"
     pesan += f"🎥 Video = <b>{video[0]}</b>\n"
     pesan += f"🎤 Voice = <b>{voice[0]}</b>\n\n"
-    pesan += f'🔰Status bot: <b> {status_bot}</b>'
+    pesan += f'🤖 Status Bot: <b> {status_bot}</b>'
     markup = InlineKeyboardMarkup([
         [InlineKeyboardButton('📸', callback_data='no'), InlineKeyboardButton(photo[1], callback_data='photo')],
         [InlineKeyboardButton('🎥', callback_data='no'), InlineKeyboardButton(video[1], callback_data='video')],
@@ -69,7 +69,7 @@ async def photo_handler_inline(client: Client, query: CallbackQuery):
     inline_keyboard = msg.reply_markup.inline_keyboard[0][1].text
     my_db = Database(msg.from_user.id)
     if inline_keyboard in ['✅', '❌']:
-        pesan = "<b>💌 Menfess User\n\n✅ = AKTIF\n❌ = TIDAK AKTIF</b>\n"
+        pesan = "<b>⚙️ Pengaturan Menfess\n\n✅ = AKTIF\n❌ = TIDAK AKTIF</b>\n"
         pesan += "______________________________\n\n"
         if inline_keyboard == '✅':
             await my_db.photo_handler('✅', client.id_bot)
@@ -84,7 +84,7 @@ async def photo_handler_inline(client: Client, query: CallbackQuery):
         pesan += f"📸 Foto = <b>{photo[0]}</b>\n"
         pesan += f"🎥 Video = <b>{video[0]}</b>\n"
         pesan += f"🎤 Voice = <b>{voice[0]}</b>\n\n"
-        pesan += f"🔰Status bot: <b>{status_bot}</b>"
+        pesan += f"🤖 Status Bot: <b>{status_bot}</b>"
         markup = InlineKeyboardMarkup([
             [InlineKeyboardButton('📸', callback_data='no'), InlineKeyboardButton(photo[1], callback_data='photo')],
             [InlineKeyboardButton('🎥', callback_data='no'), InlineKeyboardButton(video[1], callback_data='video')],
@@ -98,7 +98,7 @@ async def video_handler_inline(client: Client, query: CallbackQuery):
     inline_keyboard = msg.reply_markup.inline_keyboard[1][1].text
     my_db = Database(msg.from_user.id)
     if inline_keyboard in ['✅', '❌']:
-        pesan = "<b>💌 Menfess User\n\n✅ = AKTIF\n❌ = TIDAK AKTIF</b>\n"
+        pesan = "<b>⚙️ Pengaturan Menfess\n\n✅ = AKTIF\n❌ = TIDAK AKTIF</b>\n"
         pesan += "______________________________\n\n"
         if inline_keyboard == '✅':
             await my_db.video_handler('✅', client.id_bot)
@@ -113,7 +113,7 @@ async def video_handler_inline(client: Client, query: CallbackQuery):
         pesan += f"📸 Foto = <b>{photo[0]}</b>\n"
         pesan += f"🎥 Video = <b>{video[0]}</b>\n"
         pesan += f"🎤 Voice = <b>{voice[0]}</b>\n\n"
-        pesan += f'🔰Status bot: <b>{status_bot}</b>'
+        pesan += f'🤖 Status Bot: <b>{status_bot}</b>'
         markup = InlineKeyboardMarkup([
             [InlineKeyboardButton('📸', callback_data='no'), InlineKeyboardButton(photo[1], callback_data='photo')],
             [InlineKeyboardButton('🎥', callback_data='no'), InlineKeyboardButton(video[1], callback_data='video')],
@@ -127,7 +127,7 @@ async def voice_handler_inline(client: Client, query: CallbackQuery):
     inline_keyboard = msg.reply_markup.inline_keyboard[2][1].text
     my_db = Database(msg.from_user.id)
     if inline_keyboard in ['✅', '❌']:
-        pesan = "<b>💌 Menfess User\n\n✅ = AKTIF\n❌ = TIDAK AKTIF</b>\n"
+        pesan = "<b>⚙️ Pengaturan Menfess\n\n✅ = AKTIF\n❌ = TIDAK AKTIF</b>\n"
         pesan += "______________________________\n\n"
         if inline_keyboard == '✅':
             await my_db.voice_handler('✅', client.id_bot)
@@ -142,7 +142,7 @@ async def voice_handler_inline(client: Client, query: CallbackQuery):
         pesan += f"📸 Foto = <b>{photo[0]}</b>\n"
         pesan += f"🎥 Video = <b>{video[0]}</b>\n"
         pesan += f"🎤 Voice = <b>{voice[0]}</b>\n\n"
-        pesan += f'🔰Status bot: <b>{status_bot}</b>'
+        pesan += f'🤖 Status Bot: <b>{status_bot}</b>'
         markup = InlineKeyboardMarkup([
             [InlineKeyboardButton('📸', callback_data='no'), InlineKeyboardButton(photo[1], callback_data='photo')],
             [InlineKeyboardButton('🎥', callback_data='no'), InlineKeyboardButton(video[1], callback_data='video')],
@@ -156,7 +156,7 @@ async def status_handler_inline(client: Client, query: CallbackQuery):
     inline_keyboard = msg.reply_markup.inline_keyboard[3][0].text
     my_db = Database(msg.from_user.id)
     if inline_keyboard in ['AKTIF', 'TIDAK AKTIF']:
-        pesan = "<b>💌 Menfess User\n\n✅ = AKTIF\n❌ = TIDAK AKTIF</b>\n"
+        pesan = "<b>⚙️ Pengaturan Menfess\n\n✅ = AKTIF\n❌ = TIDAK AKTIF</b>\n"
         pesan += "______________________________\n\n"
         if inline_keyboard == 'AKTIF':
             await my_db.bot_handler('off')
@@ -171,7 +171,7 @@ async def status_handler_inline(client: Client, query: CallbackQuery):
         pesan += f"📸 Foto = <b>{photo[0]}</b>\n"
         pesan += f"🎥 Video = <b>{video[0]}</b>\n"
         pesan += f"🎤 Voice = <b>{voice[0]}</b>\n\n"
-        pesan += f'🔰Status bot: <b>{status_bot}</b>'
+        pesan += f'🤖 Status Bot: <b>{status_bot}</b>'
         markup = InlineKeyboardMarkup([
             [InlineKeyboardButton('📸', callback_data='no'), InlineKeyboardButton(photo[1], callback_data='photo')],
             [InlineKeyboardButton('🎥', callback_data='no'), InlineKeyboardButton(video[1], callback_data='video')],
