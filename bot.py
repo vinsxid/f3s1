@@ -73,9 +73,9 @@ class Bot(Client):
     
     async def kirim_pesan(self, x: str):
         db = Database(config.id_admin).get_pelanggan()
-        pesan = f'<b>📊 TOTAL USER ➜ [ {db.total_pelanggan} ] USER</b>\n\n'
-        pesan += f'➜ <i>User mengirim menfess hari ini {x}/{db.total_pelanggan} User Aktif</i>\n'
-        pesan += f'➜ <i>Berhasil DIRESET menjadi 0 Menfess\n\n#RESET</i>'
+        pesan = f'📊 TOTAL USER ➜ [ {db.total_pelanggan} ]\n\n'
+        pesan += f'➜ User mengirim menfess hari ini {x}/{db.total_pelanggan}\n'
+        pesan += f'➜ Berhasil DIRESET menjadi 0 Menfess\n'
         url = f'https://api.telegram.org/bot{config.bot_token}'
         a = requests.get(f'{url}/sendMessage?chat_id={config.channel_log}&text={pesan}&parse_mode=HTML').json()
         requests.post(f'{url}/pinChatMessage?chat_id={config.channel_log}&message_id={a["result"]["message_id"]}&parse_mode=HTML')
