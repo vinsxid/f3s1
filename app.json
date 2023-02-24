@@ -103,7 +103,7 @@
     },
     "HASTAG": {
       "description": "menambahkan hastag, dipisahkan dengan spasi (#MTgirl wajib diawal dan #MTboy setelah MTgirl)",
-      "value": "#Boy #Girl #Ask #Spill #Find #Random"
+      "value": "#Girl #Boy #Ask #Spill #Find #Random"
     },
     "PIC_BOY": {
       "description": "gambar fwb boy",
