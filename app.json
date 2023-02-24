@@ -123,25 +123,11 @@
     },
     "START_MSG": {
       "description": "pesan start pada bot",
-      "value": "Hai {fullname} 🌱 \n\nIni adalah bot menfess, semua pesan yang kamu kirim akan masuk ke channel secara anonymous. Silakan tuliskan pesanmu dengan mencantumkan salah satu hastag:\n\n
-
-#Boy / #Girl untuk Mencari Pasangan, Teman , Partner FWB\n
-#Ask untuk Bertanya\n#Story untuk Berbagi Cerita\n
-#Spill untuk Spill Masalah\n
-#Find untuk Mencari Pasangan, Teman, Partner
-#Random pertanyaan random\n\n
-Wajib username ya..\n\n
-Butuh bantuan? Hubungi @Vinsxid"
+      "value": "Hai {fullname} 🌱 \n\nIni adalah bot menfess, semua pesan yang kamu kirim akan masuk ke channel secara anonymous. Silakan tuliskan pesanmu dengan mencantumkan salah satu hastag:\n\n#Boy / #Girl untuk Mencari Pasangan, Teman , Partner FWB\n#Ask untuk Bertanya\n#Story untuk Berbagi Cerita\n#Spill untuk Spill Masalah\n#Find untuk Mencari Pasangan, Teman, Partner#Random pertanyaan random\n\nWajib username ya..\n\nButuh bantuan? Hubungi @Vinsxid"
     },
     "GAGAL_KIRIM": {
       "description": "pesan ketika hastag yang diketik tidak sesuai",
-      "value": "{mention}, pesan mu gagal terkirim silahkan gunakan hastag:\n\n
-#Boy / #Girl untuk Mencari Pasangan, Teman , Partner FWB\n
-#Ask untuk Bertanya\n#Story untuk Berbagi Cerita\n
-#Spill untuk Spill Masalah\n
-#Find untuk Mencari Pasangan, Teman, Partner
-#Random pertanyaan random\n\n
-Wajib username ya.."
+      "value": "{mention}, pesan mu gagal terkirim silahkan gunakan hastag:\n\n#Boy / #Girl untuk Mencari Pasangan, Teman , Partner FWB\n#Ask untuk Bertanya\n#Story untuk Berbagi Cerita\n#Spill untuk Spill Masalah\n#Find untuk Mencari Pasangan, Teman, Partner#Random pertanyaan random\n\nWajib username ya.."
     }
   },
   "buildpacks": [
