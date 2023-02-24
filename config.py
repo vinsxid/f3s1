@@ -43,6 +43,7 @@ hastag = os.environ.get("HASTAG", "#Girl #Boy #Thriller #Romance #Horor #Comedy 
 
 pic_boy = os.environ.get("PIC_BOY", "")
 pic_girl = os.environ.get("PIC_GIRL", "")
+#pic_talent = os.environ.get("PIC_TALENT", "")
 # =========================================================== #
 
 pesan_join = os.environ.get("PESAN_JOIN", "Tidak dapat diakses harap join terlebih dahulu")
