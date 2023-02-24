@@ -12,8 +12,9 @@ async def start_handler(client: Client, msg: types.Message):
     helper = Helper(client, msg)
     first = msg.from_user.first_name
     last = msg.from_user.last_name
+#Isi @ awal dengan nama Bot
     fullname = first if not last else first + ' ' + last
-    username = '@keluhkesahidbot' if not msg.from_user.username else '@' + msg.from_user.username
+    username = '@' if not msg.from_user.username else '@' + msg.from_user.username
     mention = msg.from_user.mention
     photo = "https://telegra.ph//file/c8eadc7762ad160804e4c.jpg"
     await msg.reply_photo(
@@ -88,7 +89,8 @@ async def gagal_kirim_handler(client: Client, msg: types.Message):
     first_name = msg.from_user.first_name
     last_name = msg.from_user.last_name
     fullname = first_name if not last_name else first_name + ' ' + last_name
-    username = '@keluhkesahidbot' if not msg.from_user.username else '@' + msg.from_user.username
+#Isi @ awal dengan nama Bot
+    username = '@' if not msg.from_user.username else '@' + msg.from_user.username
     mention = msg.from_user.mention
     return await msg.reply_photo(
         photo = "https://telegra.ph//file/c8eadc7762ad160804e4c.jpg",
