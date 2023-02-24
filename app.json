@@ -47,7 +47,7 @@
     },
     "BATAS_KIRIM": {
       "description": "Batas kirim menfess perhari",
-      "value": "2"
+      "value": "3"
     },
     "BATAS_TALENT": {
       "description": "Batas top talent",
@@ -103,7 +103,7 @@
     },
     "HASTAG": {
       "description": "menambahkan hastag, dipisahkan dengan spasi (#MTgirl wajib diawal dan #MTboy setelah MTgirl)",
-      "value": "#Boy #Girl #Ask #Find #Spill #Random"
+      "value": "#Boy #Girl #Ask #Spill #Find #Random"
     },
     "PIC_BOY": {
       "description": "gambar fwb boy",
@@ -123,11 +123,25 @@
     },
     "START_MSG": {
       "description": "pesan start pada bot",
-      "value": "Hai {fullname} 🌱 [AGYINBASE](https://t.me/AGYIN_BASEBOT) akan membantumu untuk mengirimkan pesan secara anonim ke channel @agyinbase. Silakan sampaikan pesanmu atau pap cute atau video konten positif kamu\n\nSebelum menggunakan silakan baca rules terlebih dahulu ya\n\nButuh bantuan? Hubungi @YUKI_BOY12"
+      "value": "Hai {fullname} 🌱 \n\nIni adalah bot menfess, semua pesan yang kamu kirim akan masuk ke channel secara anonymous. Silakan tuliskan pesanmu dengan mencantumkan salah satu hastag:\n\n
+
+#Boy / #Girl untuk Mencari Pasangan, Teman , Partner FWB\n
+#Ask untuk Bertanya\n#Story untuk Berbagi Cerita\n
+#Spill untuk Spill Masalah\n
+#Find untuk Mencari Pasangan, Teman, Partner
+#Random pertanyaan random\n\n
+Wajib username ya..\n\n
+Butuh bantuan? Hubungi @Vinsxid"
     },
     "GAGAL_KIRIM": {
       "description": "pesan ketika hastag yang diketik tidak sesuai",
-      "value": "{mention}, pesan mu gagal terkirim silahkan gunakan hastag:\n\n#ABoy / #AGirl untuk Mencari Pasangan, Teman , Partner FWB\n#ABsk untuk Bertanya\n#ABStory untuk Berbagi Cerita\n#ABSpill untuk Spill Masalah\n#ABFind untuk Mencari Pasangan, Teman, Partner FWB\n\nWajib username ya"
+      "value": "{mention}, pesan mu gagal terkirim silahkan gunakan hastag:\n\n
+#Boy / #Girl untuk Mencari Pasangan, Teman , Partner FWB\n
+#Ask untuk Bertanya\n#Story untuk Berbagi Cerita\n
+#Spill untuk Spill Masalah\n
+#Find untuk Mencari Pasangan, Teman, Partner
+#Random pertanyaan random\n\n
+Wajib username ya.."
     }
   },
   "buildpacks": [
